@@ -161,9 +161,31 @@ export default function BrewTimer() {
 
         <div className="row" style={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
           {timer.status === 'idle' && (
-            <button className="primary" onClick={timer.start}>
-              Start
-            </button>
+            <>
+              <button
+                className="primary"
+                onClick={timer.start}
+                style={{
+                  fontSize: 20,
+                  fontWeight: 900,
+                  padding: '16px 24px',
+                  minHeight: 64,
+                  flex: '1 1 220px',
+                }}
+              >
+                Start
+              </button>
+              <button
+                className="danger"
+                onClick={() => {
+                  hasNavigatedToResultsRef.current = false
+                  navigate('/presets')
+                }}
+                style={{ fontSize: 20, fontWeight: 900, padding: '16px 24px', minHeight: 64, flex: '1 1 220px' }}
+              >
+                Exit
+              </button>
+            </>
           )}
           {timer.status === 'running' && (
             <button
@@ -188,16 +210,18 @@ export default function BrewTimer() {
             </button>
           )}
 
-          <button
-            className="danger"
-            onClick={() => {
-              // Abort and return to presets.
-              hasNavigatedToResultsRef.current = false
-              navigate('/presets')
-            }}
-          >
-            Exit
-          </button>
+          {timer.status !== 'idle' && (
+            <button
+              className="danger"
+              onClick={() => {
+                // Abort and return to presets.
+                hasNavigatedToResultsRef.current = false
+                navigate('/presets')
+              }}
+            >
+              Exit
+            </button>
+          )}
         </div>
 
         <div style={{ height: 10 }} />
