@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="40" fill="#111827"/>
+  <path d="M60 130 C70 95, 95 62, 130 60" fill="none" stroke="#F59E0B" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="95" cy="102" r="20" fill="none" stroke="#60A5FA" stroke-width="10"/>
+  <text x="96" y="172" font-family="Arial, sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">CT</text>
+</svg>
+
