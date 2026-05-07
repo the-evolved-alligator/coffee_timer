@@ -5,6 +5,7 @@ import Presets from './screens/Presets'
 import BrewTimer from './screens/BrewTimer'
 import Results from './screens/Results'
 import Settings from './screens/Settings'
+import CreatePreset from './screens/CreatePreset'
 
 export type SoundContextValue = {
   soundEnabled: boolean
@@ -38,6 +39,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/presets" element={<Presets />} />
+          <Route path="/presets/new" element={<CreatePreset />} />
+          <Route path="/presets/edit/:presetId" element={<CreatePreset />} />
           <Route path="/brew" element={<BrewTimer />} />
           <Route path="/results" element={<Results />} />
           <Route path="/settings" element={<Settings />} />

@@ -69,7 +69,7 @@ The first interaction should get users timing a brew in seconds.
   * Continue 60g pulses every 45 seconds until 3:00 (hard stop at exactly 3:00)
 * Total timer + step timer
 * Visual progress and current instruction
-* Pause, resume, skip step
+* Manual start + reset (no pause/skip in MVP)
 
 ### 6.2 Precision Controls
 
@@ -81,12 +81,11 @@ The first interaction should get users timing a brew in seconds.
 ### 6.3 Output and Tracking
 
 * End-of-brew summary (elapsed time, parameters)
-* Optional notes field (taste, grind, adjustments)
 * Session history (future)
 
 ### 6.4 MVP Presets
 
-* Preset 1 (Default): Pulse 60g every 45 seconds, ending exactly at 3:00
+* Preset 1 (V60): 20g coffee / 300g water (1:15). Pulse 60g every 45 seconds, ending exactly at 3:00
 * Preset 2 (Origami): 20g coffee / 300g water, bloom 45s, pours at 0:45 to 160g, 1:15 to 230g, 1:45 to 300g
 * Preset 3 (Chemex): 30g coffee / 500g water, bloom 45s, pours at 0:45 to 200g, 1:15 to 350g, 1:45 to 500g
 
@@ -99,7 +98,7 @@ The first interaction should get users timing a brew in seconds.
 1. Home / Quick Start
 2. Presets / Recipes
 3. Active Brew Timer
-4. Results / Notes
+4. Results
 5. Settings
 
 ---
@@ -152,7 +151,7 @@ Goal:
 ### Must Have
 
 * Quick-start timer with the default pulse recipe baked in
-* At least 3 preset workflows (Default Pulse, Origami, Chemex)
+* At least 3 preset workflows (V60, Origami, Chemex)
 * Step-by-step cues (text + optional sound)
 * Mobile responsive UI
 * PWA install prompt and offline app shell

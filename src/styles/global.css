@@ -7,6 +7,12 @@
   --accent2: #f59e0b;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -49,6 +55,37 @@ body {
   display: flex;
   gap: 12px;
   align-items: center;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.stepGridTop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.stepGridRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .grid3 {
+    gap: 10px;
+  }
+
+  .stepGridTop {
+    gap: 10px;
+  }
 }
 
 .title {
@@ -94,6 +131,16 @@ button.danger {
 
 input,
 textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 10px 12px;
+  font-size: 16px;
+}
+
+select {
   width: 100%;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.14);
